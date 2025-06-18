@@ -9,7 +9,7 @@ const Cors = require('cors');
 //Middlewares
 app.use(Express.json());
 app.use(Cors({
-  origin: 'http://localhost:5174',
+  origin: [/vercel\.app$/,'http://localhost:5174'],
   credentials: true,
 }))
 
